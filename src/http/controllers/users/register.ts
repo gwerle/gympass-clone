@@ -9,7 +9,7 @@ export async function registerController(
 ) {
   const registerBodySchema = z.object({
     email: z.string().email(),
-    name: z.string(),
+    name: z.string().nonempty(),
     password: z.string().min(6),
   })
 
